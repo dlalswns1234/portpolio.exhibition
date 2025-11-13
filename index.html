@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Pixel Portfolio</title>
+    <title>WhatthePINK!</title>
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +12,7 @@
     <!-- Pixel fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
     <!-- Korean pixel font (Galmuri) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/junhoyeo/galmuri@latest/dist/galmuri.css">
     <!-- Pretendard -->
@@ -19,14 +20,28 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+    <!-- Intro Page -->
+    <div class="intro-page" id="introPage">
+        <div class="intro-background">
+            <div class="pixel-wave"></div>
+        </div>
+        <div class="letter-container">
+            <div class="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body"></div>
+            </div>
+            <div class="letter">
+                <div class="letter-content"></div>
+            </div>
+        </div>
+    </div>
+
     <div class="btns">
         <div class="container">
             <div class="btns__bgcolor"></div>
-            <button class="btns__logo" type="button">WHATthePINK</button>
+            <button class="btns__logo" type="button"><img src="img/조예빈_키워드_이미지.png" alt="logo"></button>
             <div class="btns__menu">
                 <button class="btn home">Home</button>
-                <button class="btn about">About</button>
-                <button class="btn skills">Skills</button>
                 <button class="btn works">Works</button>
                 <button class="btn contact">Contact</button>
             </div>
@@ -35,27 +50,73 @@
 
     <section id="home">
         <div class="wrapper">
-            <h1>WhatthePINK!</h1>
-            <h2></h2>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, nulla. Ex illo nam distinctio. Inventore natus error dolores quibusdam veniam voluptatum laborum aliquam, recusandae fugiat itaque adipisci dolorem. Porro, asperiores?
-            </h3>
-
-        </div>
-    </section>
-    <section id="about">
-        <div class="wrapper">
-            <h1>About</h1>
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, nulla. Ex illo nam distinctio. Inventore natus error dolores quibusdam veniam voluptatum laborum aliquam, recusandae fugiat itaque adipisci dolorem. Porro, asperiores?
-            </h3>
-        </div>
-    </section>
-    <section id="skills">
-        <div class="wrapper">
-            <h1>Skills</h1>
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, nulla. Ex illo nam distinctio. Inventore natus error dolores quibusdam veniam voluptatum laborum aliquam, recusandae fugiat itaque adipisci dolorem. Porro, asperiores?
-            </h3>
+            <h1>WhatthePINK.</h1>
+            <div class="profile__container">
+                <div class="profile__left">
+                    <div class="profile__image-wrapper">
+                        <img src="img/졸전프로필누끼픽셀.png" alt="Profilepixel">
+                    </div> 
+                    <div class="profile__info">
+                        <h2 class="profile__name">조예빈_Cho Ye Bin</h2>
+                        <div class="profile__description">
+                            <p>아날로그의 표현인 [편지] 와 디지털 디자인의 기초적인 표현 [픽셀] 의 결합</p>
+                            <p>가장 사랑하는 PINK를 여러가지로, 아낌없이 사용하여 제 마음을 전합니다</p>
+                            <h3>
+                                When you see my heart, you'll say 'WHATthePINK!'</h3>
+                        </div>
+                    </div>   
+                </div>
+                <div class="profile__right">
+                    <h3 class="skills__title">Skills & Tools</h3>
+                    <div class="skills__list">
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">Figma</span>
+                                <span class="skill__level">85%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">Adobe Illustrator</span>
+                                <span class="skill__level">90%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">Adobe Photoshop</span>
+                                <span class="skill__level">80%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">Adobe Indesign</span>
+                                <span class="skill__level">85%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">HTML/CSS</span>
+                                <span class="skill__level">75%</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="works" class="section">
@@ -95,9 +156,43 @@
     <section id="contact">
         <div class="wrapper">
             <h1>Contact</h1>
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, nulla. Ex illo nam distinctio. Inventore natus error dolores quibusdam veniam voluptatum laborum aliquam, recusandae fugiat itaque adipisci dolorem. Porro, asperiores?
-            </h3>
+            <div class="contact__container">
+                <div class="contact__info">
+                    <div class="contact__item">
+                        <div class="contact__icon">■</div>
+                        <h3>조예빈_ Cho Ye Bin</h3>
+                    </div>
+                    <div class="contact__item">
+                        <div class="contact__icon">■</div>
+                        <h3>Email_ cyv050811@gmail.com</h3>
+                    </div>
+                    <div class="contact__item">
+                        <div class="contact__icon">■</div>
+                        <h3>Phone_ 010-3436-8540</h3>
+                    </div>
+                    <div class="contact__item">
+                        <div class="contact__icon">■</div>
+                        <h3>Instagram_ @maybechoyemin</h3>
+                    </div>
+                </div>
+                <div class="contact__form-wrapper">
+                    <form class="contact__form" id="contactForm">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Name</label>
+                            <input type="text" id="name" name="name" class="form__input" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email</label>
+                            <input type="email" id="email" name="email" class="form__input" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="message" class="form__label">Message</label>
+                            <textarea id="message" name="message" class="form__textarea" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="form__submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -107,24 +202,45 @@
         </span>     
     </button>
 
+    <div class="cursor-star" id="cursorStar">*</div>
 
     <script>
+        // Intro Page Control
+        const introPage = document.getElementById('introPage');
+        
+        // 인트로 애니메이션 완료 후 메인 페이지로 전환
+        // 전체 애니메이션 시간: 배경 파동(2.5s) + 편지봉투 열기(1.5s, 0.8s delay) + 편지 꺼내기(1.2s, 1.5s delay) = 약 3.2초
+        setTimeout(() => {
+            introPage.classList.add('hidden');
+            // 애니메이션 완료 후 DOM에서 제거 (선택사항)
+            setTimeout(() => {
+                introPage.style.display = 'none';
+            }, 800); // fade-out 시간
+        }, 3200);
+
+        // 커서 - 마우스 따라다니기
+        const cursorStar = document.getElementById('cursorStar');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursorStar.style.left = e.clientX + 'px';
+            cursorStar.style.top = e.clientY + 'px';
+        });
+
+        // 포인터 이벤트에서 커서 숨기기
+        document.addEventListener('mouseenter', () => {
+            cursorStar.style.display = 'block';
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursorStar.style.display = 'none';
+        });
+
         const btnHome = document.querySelector('.home');
         const sectionHome = document.querySelector('#home');
         btnHome.addEventListener('click', function() {
             sectionHome.scrollIntoView({behavior:"smooth",block:"center"});
         });
 
-        const btnabout = document.querySelector('.about');
-        const sectionabout = document.querySelector('#about');
-        btnabout.addEventListener('click', function() {
-            sectionabout.scrollIntoView({behavior:"smooth",block:"center"});
-        });
-        const btnskills = document.querySelector('.skills');
-        const sectionskills = document.querySelector('#skills');
-        btnskills.addEventListener('click', function() {
-            sectionskills.scrollIntoView({behavior:"smooth",block:"center"});
-        });
         const btnworks = document.querySelector('.works');
         const sectionworks = document.querySelector('#works');
         btnworks.addEventListener('click', function() {
@@ -192,4 +308,8 @@
 
     </script>
 </body>
+</html>
+    </script>
+</body>
+
 </html>
