@@ -3,13 +3,13 @@
     --color-white: #ffffff;
     --color-light-white: #f3f3f3;
     --color-dark-white: #cfcfcf;
-    --color-black: #000000;
+    --color-black: #4B4646;
     --color-dark-grey: #222222;
     --color-grey: #666666;
     --color-light-grey: #9a9a9a;
 
     /* Font size */
-    --font-large: 48px;
+    --font-large: 52px;
     --font-medium: 28px;
     --font-regular: 18px;
     --font-small: 16px;
@@ -21,10 +21,13 @@
     --weight-regular: 400;
 
     /* Size */
-    --size-border-radius: 0px;
+    --size-border-radius: 12px;
 
     /* Annimation */
     --animation-duration: 300ms;
+
+    /* flat shadow definition (no blur, close offset, #4B4646 with 70% opacity) */
+    --flat-shadow: 4px 4px 0 rgba(75,70,70,0.7);
 }
 
 
@@ -47,7 +50,7 @@
 }
 
 body {
-    font-family: "Noto Sans KR", "Pixelify Sans", "Galmuri11", sans-serif;
+    font-family: "Noto Sans KR", "Pixelify Sans", sans-serif;
     margin: 0;
     cursor: default;
     color: var(--color-dark-grey);
@@ -61,13 +64,13 @@ body {
 
 .cursor-star {
     position: fixed;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 19;
     font-size: 32px;
-    color: rgba(255, 106, 185, 0.9);
-    text-shadow: 0 0 4px rgba(255, 106, 185, 0.5);
+    color: #e11179;
+    text-shadow: 0 0 4px rgba(255, 24, 147, 0.5);
 }
 a {
     text-decoration: none;
@@ -93,44 +96,59 @@ button {
 
 body {
     margin: 0;
-    font-family: "Noto Sans KR", "Pixelify Sans", "Galmuri11", sans-serif;
+    font-family: "Noto Sans KR", Pretendard, sans-serif;
 }
 
 section {
     width: 100%;
-    /* height: 100vh; */
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 }
-/* section:nth-child(odd) {
-    background-color: skyblue;
-} */
 .wrapper {
-    padding-top: 88px;
-    padding-bottom: 60px;
+    padding-top: 100px;
+    padding-bottom: 80px;
     max-width: 1200px;
     margin: auto;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 h1 {
-    color: var(--color-dark-grey);
+    color:#e1118a;
     font-size: 56px;
-    font-family: "Jersey 10", "Galmuri11", monospace;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    margin-top: 20px;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    text-transform: none;
+    margin-bottom: 54px;
+    margin-top: 0;
     paint-order: stroke fill;
-    -webkit-text-stroke: 2px rgba(235, 210, 224, .92);
-    text-shadow: 
-        -2px -2px 0 rgba(235, 210, 224, .92),
-        2px -2px 0 rgba(235, 210, 224, .92),
-        -2px 2px 0 rgba(235, 210, 224, .92),
-        2px 2px 0 rgba(235, 210, 224, .92),
-        -2px 0 0 rgba(235, 210, 224, .92),
-        2px 0 0 rgba(235, 210, 224, .92),
-        0 -2px 0 rgba(235, 210, 224, .92),
-        0 2px 0 rgba(235, 210, 224, .92);
+    -webkit-text-stroke: 2px #4B4646;
+    text-shadow: none;
 }
+.ss {
+    color: #e1118a7c;
+    font-size: 32px;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    text-transform: none;
+    text-align: center;
+    margin-top: -50px;
+}
+.ss h1 {
+color: #EBD2E0;
+}
+.ww {
+    color: #e1118a;
+    font-size: 70px;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    text-transform: none;
+    text-align: center;
+    margin-top: -30px;
+}
+
 h2 {
     font-size: 28px;
     font-family: "Galmuri9", "Pixelify Sans", "Galmuri11", monospace;
@@ -141,7 +159,7 @@ h3 {
     font-size: 24px;
     font-weight: 400;
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
-    margin-top: 20px;
+    margin-top: 18px;
     margin-bottom: 20px;
 }
 .btns {
@@ -165,10 +183,15 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(235, 210, 224, .92);
+    background-color: rgba(232, 177, 202, 0.8);
     z-index: -1;
-    backdrop-filter: blur(8px);
-    border-bottom: 2px solid var(--color-dark-grey);
+    backdrop-filter: blur(10px);
+}
+
+.btns p {
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    color: #e1118a;
+    font-weight: 900;
 }
 
 .btns__logo:hover {
@@ -193,6 +216,7 @@ h3 {
     background-color: #EBD2E0;
     border: 2px solid var(--color-black);
     box-shadow: 4px 4px 0 #4B4646;
+    border-radius: 8px;
     text-transform: uppercase;
     letter-spacing: .5px;
     text-shadow:
@@ -222,7 +246,7 @@ h3 {
     background-color: var(--color-dark-grey);
     color: var(--color-white);
     border: 2px solid var(--color-black);
-    border-radius: 0;
+    border-radius: 12px;
     box-shadow: 4px 4px 0 #4B4646;
     opacity: 0;
     transition: .3s;
@@ -236,23 +260,30 @@ h3 {
 }
 
 .work__categories {
-    margin: 60px 40px;
+    margin: 48px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 .category__btn {
     border: 2px solid var(--color-black);
     font-size: var(--font-regular);
     padding: 8px 48px;
-    margin-bottom: 12px;
-    font-family: "Press Start 2P", "Galmuri11", monospace;
+    margin-bottom: 0;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
     background-color: var(--color-white);
     color: var(--color-black);
     box-shadow: 4px 4px 0 #4B4646;
-    border-radius: 0;
+    border-radius: 8px;
     text-transform: uppercase;
+    text-align: center;
 }
 .category__btn.selected,
 .category__btn:hover {
-    background-color: var(--color-black);
+    background-color: #e1118a;
     color: var(--color-white);
 }
 
@@ -265,8 +296,8 @@ h3 {
 .category__count {
     display: inline-block;
     background-color: var(--color-dark-white);
-    border-radius: 0;
-    color: var(--color-black);
+    border-radius: 6px;
+    color: #EBD2E0;
     width: 24px;
     height: 24px;
     line-height: 24px;
@@ -275,19 +306,21 @@ h3 {
     top: -20px;
     opacity: 0;
     transition: all var(--animation-duration) ease;
-    border: 2px solid var(--color-black);
     box-shadow: 2px 2px 0 #4B4646;
 }
 
+/* Scrapbook Board Background */
 .work__projects {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 380px;
+    min-height: 700px;
     opacity: 1;
     transition: all var(--animation-duration) ease-out;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 48px;
+    margin-bottom: 0;
+    padding: 60px 40px;
 }
 
 .work__projects.anim-out {
@@ -295,20 +328,55 @@ h3 {
     transform: translateY(20px);
 }
 
+/* Brown clipboard/board background */
+.scrapbook-board {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    min-height: 600px;
+    border: 3px solid #5C4A37;
+    box-shadow: var(--flat-shadow)
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 60px 50px;
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 39px,
+            rgba(0, 0, 0, 0.05) 39px,
+            rgba(0, 0, 0, 0.05) 40px
+        );
+    overflow: visible;
+}
+
+/* Metal clip at top */
+.scrapbook-board::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 20px;
+    background: linear-gradient(180deg, #C0C0C0 0%, #808080 100%);
+    border: 2px solid #5C5C5C;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 6;
+}
+
 .project {
     position: relative;
     display: none;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
-    width: min(520px, 90%);
-    padding: 40px;
-    margin: 40px 0;
-    background-color: var(--color-light-white);
-    border: 2px solid var(--color-black);
-    box-shadow: 4px 4px 0 #4B4646;
-    border-radius: 0;
+    gap: 0;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
 }
+
 .project.active {
     display: flex;
 }
@@ -316,56 +384,230 @@ h3 {
 .project.invisible {
     display: none;
 }
+
+/* Project trigger - 이미지와 아이콘 */
+.project__trigger {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+}
+
+/* Image wrapper - paper effect */
+.project__img-wrapper {
+    position: relative;
+    width: 100%;
+    transform: rotate(-1.5deg);
+    transition: transform 0.3s ease;
+}
+
+.project.active .project__img-wrapper {
+    animation: paperPlace 0.6s ease-out;
+}
+
+@keyframes paperPlace {
+    0% {
+        transform: rotate(-5deg) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(-1.5deg) scale(1);
+        opacity: 1;
+    }
+}
+
 .project__img {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 10;
     object-fit: cover;
-    border: 2px solid var(--color-black);
-    box-shadow: 4px 4px 0 #4B4646;
-    filter: grayscale(100%) contrast(1.05);
-}
-.project__description {
-    width: 100%;
-    position: static;
-    background-color: var(--color-white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    padding: 32px;
-    border: 2px solid var(--color-black);
-    box-shadow: 4px 4px 0 #4B4646;
-    transition: transform var(--animation-duration) ease;
+    object-position: top;
+    background-color: #F5F5F0;
+    border: 1px solid rgba(75, 70, 70, 0.3);
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    display: block;
+    filter: brightness(0.98) contrast(1.02);
 }
 
-.project__description h3 {
-    color: var(--color-black);
-    font-family: "Press Start 2P", "Galmuri11", monospace;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-.project__description h3::after {
-    content: "";
-    display: block;
-    position: relative;
-    left: 50%;
+/* Project icon button */
+.project__icon {
     width: 50px;
-    height: 2px;
-    transform: translateX(-50%);
-    margin-top: 24px;
-    background-color: var(--color-dark-white);
+    height: 50px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 5;
+    margin-top: 20px;
 }
-.project__description span {
-    font-size: 14px;
-    color: var(--color-grey);
-    font-family: "Pixelify Sans", "Galmuri11", monospace;
-    text-transform: uppercase;
+
+.project__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.project__icon:hover {
+    transform: scale(1.1);
+}
+
+.project__icon .material-symbols-outlined {
+    font-size: 32px;
+    color: #FFFFFF;
+    transition: transform 0.3s ease;
+}
+
+.project.expanded .project__icon .material-symbols-outlined {
+    transform: rotate(180deg);
+}
+
+/* Project letter - 펼쳐지는 편지지 */
+.project__letter {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease;
+    opacity: 0;
+    margin-top: 0;
+}
+
+.project.expanded .project__letter {
+    max-height: 800px;
+    opacity: 1;
+    margin-top: 20px;
+}
+
+.letter-paper {
+    position: relative;
+    background-color: #f3e2ec;
+    padding: 40px 48px;
+    border: none;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.15),
+        0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 23px,
+            rgba(198, 164, 183, 0.3) 23px,
+            rgba(216, 183, 202, 0.3) 24px
+        );
+    transform: rotate(0.5deg);
+    min-height: 200px;
+}
+
+.letter-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding-top: 8px;
+    text-align: left;
+}
+
+.project__description {
+    font-size: 18px;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    color: var(--color-dark-grey);
+    font-weight: 300;
+    line-height: 160%;
+    margin: 0;
+}
+
+/* 핑크 장식 요소들 */
+.pink-decoration {
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    animation: float 3s ease-in-out infinite;
+}
+
+.pink-heart {
+    font-size: 32px;
+    color: #FF6FA9;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(0 2px 4px rgba(255, 111, 169, 0.3));
+}
+
+.pink-heart--1 {
+    top: 20px;
+    left: 30px;
+    transform: rotate(-15deg);
+    animation-delay: 0s;
+}
+
+.pink-heart--2 {
+    top: 80px;
+    right: 40px;
+    transform: rotate(20deg);
+    animation-delay: 1s;
+}
+
+.pink-star {
+    font-size: 28px;
+    color: #FFB6D9;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(0 2px 4px rgba(255, 182, 217, 0.3));
+}
+
+.pink-star--1 {
+    bottom: 100px;
+    left: 50px;
+    transform: rotate(25deg);
+    animation-delay: 0.5s;
+}
+
+.pink-star--2 {
+    bottom: 40px;
+    right: 60px;
+    transform: rotate(-30deg);
+    animation-delay: 1.5s;
+}
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(var(--rotation, 0deg));
+    }
+    50% {
+        transform: translateY(-8px) rotate(var(--rotation, 0deg));
+    }
+}
+
+.pink-heart--1 {
+    --rotation: -15deg;
+}
+
+.pink-heart--2 {
+    --rotation: 20deg;
+}
+
+.pink-star--1 {
+    --rotation: 25deg;
+}
+
+.pink-star--2 {
+    --rotation: -30deg;
 }
 
 #contact {
     background-color: var(--color-black);
+    margin-bottom: 0;
+    padding-bottom: 100px;
 }
 
 #contact h1,
@@ -387,88 +629,153 @@ h3 {
 
 #home h1 {
     text-align: center;
+    font-size: large;
 }
 
-#home .profile__container {
-    text-align: left;
-}
-
-.profile__container {
+/* ID Card Section */
+.id-card {
     display: flex;
-    gap: 48px;
-    margin-top: 60px;
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    margin: 48px auto 0;
+    margin-top: 70px;
+    background-color: rgba(235, 210, 224, 0.6);
+    border: 1px solid var(--color-black);
+    box-shadow: 2px 2px 0 #4B4646;
+    border-radius: 16px;
+    padding: 40px;
+    gap: 40px;
     align-items: flex-start;
 }
 
-.profile__left {
+.id-card__photo {
+    flex-shrink: 0;
+    width: 220px;
+    height: 280px;
+    border: 1px solid var(--color-black);
+    background-color: var(--color-white);
+    padding: 10px;
+    box-shadow: 2px 2px 0 rgba(75, 70, 70, 0.1);
+    border-radius: 8px;
+}
+
+.id-card__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+.id-card__info {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
+    justify-content: flex-start;
+    text-align: left;
 }
 
-.profile__image-wrapper {
-    width: 280px;
-    height: 280px;
-    border: 2px solid var(--color-black);
-    box-shadow: 4px 4px 0 #4B4646;
-    background-color: var(--color-light-white);
-    overflow: hidden;
-}
-
-.profile__image {
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
-}
-
-.profile__info {
+.id-card__header {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--color-black);
+    padding-bottom: 16px;
 }
 
-.profile__name {
-    font-size: 32px;
-    font-family: "Galmuri11";
+.id-card__title {
+    font-size: 18px;
+    font-family: "Press Start 2P", monospace;
     color: var(--color-black);
     margin: 0;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-align: left;
 }
 
-.profile__description {
+.id-card__number {
+    font-size: 13px;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    color: var(--color-dark-grey);
+    font-weight: 400;
+    text-align: right;
+}
+
+.id-card__details {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    text-align: left;
 }
 
-.profile__description p {
-    font-size: 16px;
+.id-card__detail-item {
+    display: flex;
+    gap: 16px;
+    font-size: 17px;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    text-align: left;
+    align-items: baseline;
+}
+
+.id-card__label {
+    font-weight: 600;
+    color: var(--color-dark-grey);
+    min-width: 140px;
+    text-align: left;
+}
+
+.id-card__value {
+    color: var(--color-black);
+    font-weight: 400;
+    text-align: left;
+    flex: 1;
+}
+
+.id-card__description {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(75, 70, 70, 0.2);
+    text-align: left;
+}
+
+.id-card__text {
+    font-size: 13px;
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
     color: var(--color-dark-grey);
-    line-height: 1.6;
+    line-height: 1.7;
     margin: 0;
+    font-style: italic;
+    text-align: left;
 }
 
-.profile__right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+/* Skills Section */
+.skills__section {
+    margin-top: 70px;
+    text-align: left;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .skills__title {
     font-size: 24px;
-    font-family: "Press Start 2P", "Galmuri11", monospace;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
     color: var(--color-black);
     margin: 0;
     text-transform: uppercase;
+    text-align: right;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .skills__list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 26px;
 }
 
 .skill__item {
@@ -485,41 +792,67 @@ h3 {
 
 .skill__name {
     font-size: 16px;
-    font-family: "Press Start 2P", "Galmuri11", monospace;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
     color: var(--color-black);
     text-transform: uppercase;
 }
 
 .skill__level {
     font-size: 14px;
-    font-family: "Press Start 2P", "Galmuri11", monospace;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
     color: var(--color-dark-grey);
 }
 
 .skill__bar {
     width: 100%;
     height: 24px;
-    background-color: var(--color-light-white);
+    background-color: #4B4646;
     border: 2px solid var(--color-black);
     box-shadow: 2px 2px 0 #4B4646;
+    border-radius: 12px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .skill__progress {
     height: 100%;
     background-color: rgba(235, 210, 224, .92);
     transition: width 0.8s ease;
-    border-right: 2px solid var(--color-black);
+    position: relative;
+    border: 2px solid var(--color-black);
+    border-right: none;
+    box-sizing: border-box;
+    border-radius: 12px;
+    /* 연필 몸체 부분 - 오른쪽 끝을 뾰족하게 */
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+}
+
+/* 연필 끝 부분의 내부 (핑크색) */
+.skill__progress::before {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 8px solid rgba(235, 210, 224, .92);
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    z-index: 2;
 }
 
 /* Contact Section */
 .contact__container {
     display: flex;
     gap: 60px;
-    margin-top: 60px;
+    margin-top: 48px;
     align-items: flex-start;
     margin-bottom: 0;
+}
+
+.contact h1{
+    text-align: center;
+    -webkit-text-stroke: 2px #e11179;
 }
 
 .contact__info {
@@ -539,16 +872,19 @@ h3 {
 }
 
 .contact__icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     color: var(--color-white);
-    font-size: 20px;
-    line-height: 1;
-    font-family: "Press Start 2P", "Galmuri11", monospace;
+}
+
+.contact__icon .material-symbols-outlined {
+    font-size: 24px;
+    color: var(--color-white);
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
 .contact__item h3 {
@@ -577,7 +913,7 @@ h3 {
 
 .form__label {
     font-size: 14px;
-    font-family: "Press Start 2P", "Galmuri11", monospace;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
     color: var(--color-white);
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -592,6 +928,7 @@ h3 {
     background-color: var(--color-white);
     border: 2px solid var(--color-black);
     box-shadow: 4px 4px 0 #4B4646;
+    border-radius: 8px;
     outline: none;
     resize: vertical;
     transition: box-shadow var(--animation-duration) ease;
@@ -610,16 +947,17 @@ h3 {
 .form__submit {
     padding: 14px 32px;
     font-size: 14px;
-    font-family: "Press Start 2P", "Galmuri11", monospace;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
     color: var(--color-black);
     background-color: rgba(235, 210, 224, .92);
     border: 2px solid var(--color-white);
     box-shadow: 4px 4px 0 #4B4646;
+    border-radius: 8px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     cursor: none;
     transition: all var(--animation-duration) ease;
-    align-self: flex-start;
+    align-self: center;
 }
 
 .form__submit:hover {
@@ -633,17 +971,124 @@ h3 {
     transform: translate(2px, 2px);
 }
 
-/* Responsive */
+/* ---------- SCRAP+조잡 데코 및 레이아웃 조정 (추가) ---------- */
+
+/* 아이디카드: 왼쪽으로 조금 치우치고 오른쪽으로 살짝 기울이기, 카드가 쌓인 느낌을 위해 position 추가 */
+.id-card {
+    position: relative; /* 데코 위치용 */
+    margin-left: 40px;  /* 왼쪽으로 이동 */
+    margin-right: auto;
+    transform: rotate(3deg); /* 오른쪽으로 살짝 기울임 */
+    transform-origin: top left;
+    transition: transform 220ms ease;
+    box-shadow: 6px 6px 0 #4B4646;
+}
+
+/* 스킬 섹션을 살짝 오른쪽으로 밀기 (조잡한 레이아웃 느낌) */
+.skills__section {
+    transform: translateX(48px);
+    transition: transform 220ms ease;
+}
+
+/* 아이디카드 위에 붙여진 포스트잇 (조잡하게!) */
+.id-card::before {
+    content: '';
+    position: absolute;
+    width: 86px;
+    height: 72px;
+    top: -22px;
+    left: -28px;
+    background: linear-gradient(180deg,#fff9b3 0%,#fff0a0 100%);
+    border: 3px solid #c28f00;
+    box-shadow: 6px 6px 0 rgba(75,70,70,0.85);
+    transform: rotate(-16deg);
+    z-index: 12;
+    border-radius: 6px;
+    image-rendering: pixelated;
+}
+
+.work__categories h3 { 
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    color: var(--color-dark-grey);
+}
+
+/* 스크랩북 보드 가장자리에 조금 더 조잡한 장식들 */
+.scrapbook-board::after {
+    content: '★';
+    position: absolute;
+    right: -28px;
+    top: -30px;
+    font-size: 34px;
+    color: #8aa9e4;
+    transform: rotate(20deg);
+    z-index: 8;
+    text-shadow: 1px 1px 0 #4B4646;
+}
+
+/* 왼쪽 아래 구석의 포스트잇, 접힌 모서리 느낌 */
+.scrapbook-board::before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    bottom: -26px;
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(180deg,#ffdfe6 0%, #ffd1e4 100%);
+    border: 2px solid #d36a9a;
+    transform: rotate(-8deg);
+    z-index: 7;
+    box-shadow: 6px 6px 0 rgba(75,70,70,0.9);
+}
+
+/* 우표 위치를 화면 오른쪽에 더 밀착 (안정적인 우측 정렬) */
+.home-header { position: relative; }
+.home-stamp {
+    margin-top: 150px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-6deg);
+}
+
+/* 프로필 사진 주변 '조잡한' 스티커/데코 */
+.profile__container { position: relative; }
+
+
+/* 엄청 조잡한 포스트잇 더 추가 (랜덤 배치 느낌) */
+.wrapper::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    bottom: -30px;
+    width: 56px;
+    height: 146px;
+    background: linear-gradient(180deg,#f5ffd0 0%, #f2f7b0 100%);
+    border: 2px solid #c7c42b;
+    transform: rotate(-18deg);
+    z-index: 4;
+    box-shadow: 6px 6px 0 rgba(75,70,70,0.85);
+}
+
+/* 더 많은 픽셀 느낌을 위해 작은 별 조각들 (조잡하게 여러 곳에) */
+.pink-decoration.nano-star {
+    position: absolute;
+    z-index: 14;
+    font-size: 12px;
+    color: #ffb6d9;
+    transform: rotate(18deg);
+    text-shadow: 0 1px 0 rgba(75,70,70,0.4);
+    pointer-events: none;
+}
+
+/* 반응형 - 요소가 겹치지 않도록 조정 */
 @media (max-width: 968px) {
-    .profile__container,
-    .contact__container {
-        flex-direction: column;
-    }
-    
-    .profile__image-wrapper {
-        width: 200px;
-        height: 200px;
-        align-self: center;
+    .id-card { margin-left: auto; transform: rotate(2deg); }
+    .skills__section { transform: translateX(0); margin-top: 28px; }
+    .scrapbook-board::before, .scrapbook-board::after, .wrapper::before {
+        display: none;
     }
 }
 
@@ -683,14 +1128,14 @@ h3 {
             0deg,
             transparent,
             transparent 39px,
-            rgba(235, 210, 224, 0.7) 39px,
+            rgba(235, 210, 224, 0.7) 40px,
             rgba(235, 210, 224, 0.7) 40px
         ),
         /* 세로 여백선 (왼쪽) */
         linear-gradient(90deg,
             transparent 0px,
             transparent 39px,
-            rgba(235, 210, 224, 0.9) 39px,
+            rgba(235, 210, 224, 0.9) 40px,
             rgba(235, 210, 224, 0.9) 40px,
             transparent 40px
         ),
@@ -698,8 +1143,8 @@ h3 {
         linear-gradient(90deg,
             transparent calc(100% - 40px),
             rgba(235, 210, 224, 0.9) calc(100% - 40px),
-            rgba(235, 210, 224, 0.9) calc(100% - 39px),
-            transparent calc(100% - 39px)
+            rgba(235, 210, 224, 0.9) calc(100% - 40px),
+            transparent calc(100% - 40px)
         ),
         /* 찢긴 가장자리 효과 (좌측) */
         linear-gradient(90deg, 
@@ -855,7 +1300,7 @@ h3 {
     width: 200px;
     height: 200px;
     background-color: #F5F0F3;
-    border: 3px solid #000;
+    border: 3px solid #4B4646;
     box-shadow: 6px 6px 0 #4B4646;
     background-image: 
         /* 찢긴 가장자리 효과 (좌측) */
@@ -958,11 +1403,12 @@ h3 {
     z-index: 3;
 }
 
-.letter-content {
+/* Intro page letter content - 프로젝트 편지지와 구분 */
+.letter .letter-content {
     width: 100%;
     height: 100%;
     background-color: #FFFFFF;
-    border: 3px solid #000;
+    border: 3px solid #4B4646;
     box-shadow: 6px 6px 0 #4B4646;
     position: relative;
     transform-style: preserve-3d;
@@ -983,7 +1429,8 @@ h3 {
         );
 }
 
-.letter-content::before {
+/* Intro page letter content의 before - 프로젝트 편지지와 구분 */
+.letter .letter-content::before {
     content: '';
     position: absolute;
     top: 20px;
@@ -1015,7 +1462,7 @@ h3 {
 
 /* Pixelated effect for envelope and letter */
 .envelope-body,
-.letter-content {
+.letter .letter-content {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
@@ -1043,5 +1490,111 @@ h3 {
         height: 150px;
     }
 }
+
+/* ---------- Adjustments per request ---------- */
+
+/* flat shadow definition (no blur, close offset, #4B4646 with 70% opacity) */
+:root {
+    --flat-shadow: 4px 4px 0 rgba(75,70,70,0.7);
+}
+
+/* 1) 아이디 카드 아래쪽 포스트잇: 오른쪽으로 이동 + 하늘색 계열 + 래디우스 제거 */
+.wrapper::before {
+    left: auto;
+    right: 60px;            /* 더 오른쪽으로 이동 */
+    bottom: -30px;
+    width: 56px;
+    height: 46px;
+    background: linear-gradient(180deg, #e6f2ff 0%, #cfe8ff 100%); /* 하늘색 계열 */
+    border: 2px solid #7aa7ff;
+    transform: rotate(-18deg);
+    z-index: 4;
+    box-shadow: var(--flat-shadow) ;
+    border-radius: 0 ; /* 포스트잇 라운드 제거 */
+}
+
+/* 2) 아이디카드와 스킬바 사이 여백 늘리기 */
+.id-card {
+    margin-bottom: 72px; /* 기존 margin 덮어쓰기 */
+}
+.skills__section {
+    margin-top: 112px; /* 충분히 넉넉한 간격 */
+}
+
+/* 3) 스킬바 제목과 스킬 항목 사이 여백 증가 */
+.skills__title {
+    margin-bottom: 20px; /* 제목 아래 공간 */
+}
+.skills__list {
+    gap: 40px; /* 항목들 사이 간격 증가 */
+}
+.skill__item { 
+    gap: 16px;
+}
+.skill__header {
+    margin-bottom: 8px;
+}
+
+/* 4) 모든 포스트잇 스타일(주요 의심 요소들) 래디우스 제거 */
+.id-card::before,
+.scrapbook-board::before,
+.wrapper::before,
+.profile__container::after,
+.home-stamp {
+    border-radius: 0 !important;
+}
+
+/* 5) 프로젝트 레터 콘텐츠: 행간(행각) 줄이기 + 중요도에 따른 가중치(강약) */
+.letter .letter-content {
+    gap: 8px;               /* 블록 간격 축소 */
+    line-height: 1.28;      /* 전체 행간 줄이기 */
+    text-align: left;
+}
+
+/* 중요도별 스타일: 제목(강), 타입(중), 설명(약) */
+.letter .letter-content h3,
+.project__title {
+    font-size: 18px;
+    font-weight: 800;       /* 가장 강함 */
+    letter-spacing: -0.2px;
+    margin: 0;
+    color: var(--color-dark-grey);
+}
+
+.letter .letter-content .project__type {
+    font-size: 13px;
+    font-weight: 600;       /* 중간 강도 */
+    color: rgba(75,70,70,0.95);
+    opacity: 0.95;
+    margin: 0;
+}
+
+.letter .letter-content .project__description,
+.project__description {
+    font-size: 14px;
+    font-weight: 400;       /* 약한 강도 */
+    color: rgba(75,70,70,0.85);
+    line-height: 1.35;
+    margin: 0;
+    opacity: 0.9;
+}
+
+
+/* 2) 재적용: 실제로 섀도가 필요하다고 판단되는 요소들에만 평면 섀도 적용 */
+:root {
+    --flat-shadow: 4px 4px 0 rgba(75,70,70,0.7);
+}
+.id-card,
+.id-card::before,
+.id-card__photo,
+.scrapbook-board,
+.photo-stack::before{
+    box-shadow: var(--flat-shadow) ;
+}
+
+
+
+
+
 
 
